@@ -1,0 +1,756 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-size: 14px;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.NonStyledLinks {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
+}
+
+header img {
+  width: 4%;
+  margin-left: 15%;
+}
+
+header nav {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header #MenuBar {
+  background: none;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  color: #fff;
+  right: 5%;
+  display: none;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  padding: 5px 10px;
+}
+header nav a::after {
+  position: absolute;
+  content: "";
+  background-color: #909090;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+header nav a:hover::after {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 400ms, translateX 400ms;
+}
+
+body .AboutMe {
+  width: 99vw;
+  height: 100vh;
+  background: rgb(254, 254, 254);
+  background: linear-gradient(
+    104deg,
+    rgba(254, 254, 254, 1) 47%,
+    rgba(0, 0, 0, 1) 47%
+  );
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 5rem;
+}
+
+header nav .ContactMeLink {
+  color: #000;
+  background-color: #fff;
+
+  border-radius: 15px;
+}
+
+header nav .ContactMeLink::after {
+  position: absolute;
+  content: "";
+  background-color: #000000;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+}
+
+header nav .ContactMeLink:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+body .AboutMe .Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+  width: 70%;
+}
+body .AboutMe .Content .left h5 {
+  font-size: 22px;
+  margin: 1.4rem 0;
+}
+body .AboutMe .Content .left h2 {
+  font-family: "Raleway";
+  font-size: 35px;
+  margin: 10px 0;
+}
+body .AboutMe .Content .left h6 {
+  font-size: 18px;
+  color: #909090;
+}
+body .AboutMe .Content .left .SocialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: 50%;
+  margin: 3rem 0;
+}
+body .AboutMe .Content .left .SocialMedia a {
+  font-size: 30px;
+  padding: 5px;
+}
+
+body .AboutMe .Content .left .SocialMedia a:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
+}
+/* body .AboutMe {} */
+body .AboutMe .Content .MainProfilePic {
+  width: 33vw;
+  align-self: flex-end;
+}
+
+body .AboutMeTwo,
+body .Skills,
+body .ContactME {
+  width: 99vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body .AboutMeTwo .MainH2,
+body .Skills .MainH2,
+body .Portfolio .MainH2,
+body .ContactME .MainH2 {
+  font-size: 25px;
+  padding: 1rem 3rem;
+  border: 5px solid black;
+}
+
+/* body .AboutMeTwo .MainH2:hover {
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+
+  transition: background-color 300ms, border-radius 300ms, color 500ms;
+} */
+
+body .AboutMeTwo .MainP {
+  font-size: 14px;
+  color: #050505;
+  width: 55%;
+  text-align: center;
+  margin: 3rem 0;
+}
+body .AboutMeTwo .MainH3 {
+  margin: 0.7rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.3% 2%;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+body .AboutMeTwo .Seperator {
+  width: 160px;
+  margin: 2rem;
+}
+body .AboutMeTwo .Boxes {
+  width: 65vw;
+  height: 55vh;
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-template-rows: 47.5% 47.5%;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+body .AboutMeTwo .Boxes div {
+  height: 100%;
+  width: 90%;
+  background-size: 15%;
+  padding: 5%;
+  background-repeat: no-repeat;
+}
+body .AboutMeTwo .Boxes .Development {
+  background-image: url("/Ressources/Code.png");
+}
+body .AboutMeTwo .Boxes .Design {
+  background-image: url("/Ressources/Design.png");
+}
+body .AboutMeTwo .Boxes .Photoshop {
+  width: 47.5%;
+  background-image: url("/Ressources/PS.png");
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+  padding: 2%;
+}
+
+body .AboutMeTwo .SeperatorTwo {
+  justify-self: flex-end;
+  margin: 0;
+}
+
+body .Skills {
+  height: 120vh;
+}
+body .Skills .UsingNow,
+body .Skills .Learning,
+body .Skills .OtherSkills {
+  width: 45vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+body .Skills .UsingNow .Grid,
+body .Skills .Learning .Grid,
+body .Skills .OtherSkills .Grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+
+  height: 100%;
+  width: 100%;
+}
+
+body .Skills .UsingNow h2,
+body .Skills .Learning h2,
+body .Skills .OtherSkills h2 {
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+body .Skills .UsingNow .Grid div,
+body .Skills .Learning .Grid div,
+body .Skills .OtherSkills .Grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .Skills .UsingNow .Grid div span,
+body .Skills .Learning .Grid div span,
+body .Skills .OtherSkills .Grid div span {
+  font-size: 120%;
+  text-align: center;
+}
+body .Skills .UsingNow .Grid div img,
+body .Skills .Learning .Grid div img,
+body .Skills .OtherSkills .Grid div img {
+  width: 40%;
+}
+
+body .Portfolio {
+  width: 99vw;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+body .Portfolio .first {
+  width: 100%;
+  height: 25%;
+  background-image: url("/Ressources/PortfolioBackground.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .Portfolio .second {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .Portfolio .second .Bar {
+  width: 100%;
+  height: 10%;
+  background-color: #363636;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body .Portfolio .second .Bar button {
+  width: 10%;
+  font-size: 13px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #7c7c7c;
+  padding: 5px;
+  color: #7c7c7c;
+}
+/* .buttonChosen {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+} */
+
+body .Portfolio .second .Cards {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+body .Portfolio .second .Cards .AllDiv,
+.DevelopedDiv,
+.DesignedDiv {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  position: absolute;
+}
+body .Portfolio .second .Cards .AllDiv {
+  transform: translateX(0%);
+}
+
+body .Portfolio .second .Cards .DevelopedDiv {
+  transform: translateX(100%);
+  display: none;
+}
+
+body .Portfolio .second .Cards .DesignedDiv {
+  transform: translateX(200%);
+  display: none;
+}
+
+.HiddenItem {
+  visibility: hidden;
+}
+
+.Box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.Box img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.Box .HoverDiv {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 14, 14, 0.925);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.Box .HoverDiv h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Box .HoverDiv span {
+  color: #fff;
+  margin: 2%;
+}
+
+.Box .HoverDiv div {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Box .HoverDiv div a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  padding: 0 3%;
+}
+
+.Box .HoverDiv div a:hover {
+  padding: 0 5%;
+  transition: padding 300ms;
+}
+
+body .ContactME .Content {
+  width: 60%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body .ContactME .Content div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body .ContactME .Content div:hover {
+  transform: scale(1.05);
+  transition: all 500ms ease-in-out;
+}
+
+body .ContactME .Content .Phone {
+  border-radius: 10px 5px 5px 50px;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-top: 2px solid black;
+  border-right: 3px solid rgb(43, 42, 42);
+}
+body .ContactME .Content .Email {
+  border-radius: 5px 50px 10px 5px;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 2px solid black;
+  border-left: 3px solid rgb(43, 42, 42);
+}
+
+body .ContactME .Content .fa-envelope,
+body .ContactME .Content .fa-whatsapp {
+  font-size: 70px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+footer a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20%;
+  justify-content: space-around;
+  font-size: 16px;
+  color: #fff;
+}
+
+footer .SocialMediaFooter {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .SocialMediaFooter a {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  height: fit-content;
+  width: fit-content;
+  font-size: 20px;
+}
+footer .SocialMediaFooter a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 100ms, color 200ms;
+}
+
+footer .Copyrights {
+  color: #fff;
+}
+
+footer .Copyrights span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  header nav {
+    width: 40vw;
+  }
+  body .AboutMe .Content .MainProfilePic {
+    width: 37vw;
+  }
+
+  body .AboutMe .Content {
+    width: 80%;
+  }
+  body .ContactME .Content {
+    width: 70%;
+  }
+  body .AboutMe {
+    background: linear-gradient(
+      95deg,
+      rgba(254, 254, 254, 1) 47%,
+      rgba(0, 0, 0, 1) 47%
+    );
+  }
+}
+@media screen and (max-width: 900px) {
+  body .AboutMe .Content {
+    width: 90%;
+  }
+
+  header nav {
+    width: 45vw;
+  }
+
+  body .AboutMe .Content .MainProfilePic {
+    width: 42vw;
+  }
+  body .ContactME .Content {
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .Portfolio .second .Cards .AllDiv,
+  .DevelopedDiv,
+  .DesignedDiv {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 32%);
+  }
+
+  header nav {
+    width: 55vw;
+  }
+
+  header img {
+    margin-left: 7%;
+  }
+
+  body .AboutMe .Content {
+    justify-content: center;
+  }
+  body .AboutMe .Content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .AboutMe .Content .left h5,
+  body .AboutMe .Content .left h2,
+  body .AboutMe .Content .left .SocialMedia a {
+    color: #fff;
+  }
+
+  body .AboutMeTwo .Boxes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 32%);
+  }
+
+  body .AboutMeTwo .Boxes .Development {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  body .AboutMeTwo .Boxes .Design {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  body .AboutMeTwo .Boxes .Photoshop {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 85%;
+  }
+
+  body .AboutMeTwo {
+    height: 140vh;
+  }
+
+  body .AboutMe .Content .MainProfilePic {
+    display: none;
+  }
+
+  body .AboutMe {
+    background-image: url("/Ressources/BackgroundResponsive.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  body .Skills .Learning,
+  body .Skills .OtherSkills {
+    display: none;
+  }
+
+  body .Skills .UsingNow {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+  }
+  body .Skills .UsingNow .Grid {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+    justify-content: space-around;
+  }
+
+  body .ContactME .Content div {
+    width: 50%;
+  }
+
+  body .Portfolio .second .Bar button {
+    width: 20%;
+  }
+
+  body .ContactME .Content {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 650px) {
+  header nav {
+    width: 65vw;
+  }
+
+  header img {
+    margin-left: 2%;
+  }
+  body .ContactME .Content div {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 580px) {
+  header {
+    background-color: #000;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header #MenuBar {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    width: 100%;
+    height: 170px;
+    align-items: center;
+    background-color: #000000af;
+    display: none;
+    transform: translateX(-100%);
+  }
+
+  header nav .ContactMeLink {
+    border-radius: 0;
+  }
+
+  header nav a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    border-radius: 0;
+  }
+
+  header nav a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  header nav .ContactMeLink:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  body .ContactME .Content div {
+    width: 70%;
+  }
+  body .Portfolio .second .Cards .AllDiv,
+  .DevelopedDiv,
+  .DesignedDiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 32%);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body .ContactME .Content div {
+    width: 95%;
+  }
+  body .Portfolio .second .Bar button {
+    width: 30%;
+  }
+
+  body .Skills .UsingNow .Grid div img {
+    width: 70%;
+  }
+  body .ContactME .Content {
+    width: 100%;
+  }
+}
